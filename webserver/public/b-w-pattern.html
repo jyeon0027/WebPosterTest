@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html class="nojs html css_verticalspacer" lang="en-GB">
+ <head>
+
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="generator" content="2015.2.1.352"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="scripts/html2canvas.js"></script>
+  
+  <script type="text/javascript">
+   // Update the 'nojs'/'js' class on the html node
+document.documentElement.className = document.documentElement.className.replace(/\bnojs\b/g, 'js');
+
+// Check that all required assets are uploaded and up-to-date
+if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["jquery-1.8.3.min.js", "museutils.js", "museconfig.js", "webpro.js", "jquery.watch.js", "require.js", "b-w-pattern.css"], "outOfDate":[]};
+</script>
+  
+  <title>B+W pattern</title>
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=3916556066"/>
+  <link rel="stylesheet" type="text/css" href="css/master_a-master.css?crc=4173069111"/>
+  <link rel="stylesheet" type="text/css" href="css/b-w-pattern.css?crc=4168220634" id="pagesheet"/>
+   
+  <script>
+	  $(document).ready(function () {
+			var check=false;
+		  	$('#u2961-17').click(function () {   
+		  		if(!check){
+		           	           
+		           var canvas="";
+		           html2canvas($("#pu494"), {
+			           	  onrendered: function(canvas) {
+			           		var form = $('#widgetu2946');
+			           		var form_name = document.contentForm;
+			           		
+			           	 	form_name.contentImg.value=$('#u1543_img').attr('src');
+				           	
+			           	 	var pic = canvas.toDataURL("image/png");
+				           	pic = pic.replace('data:image/png;base64',"");
+				           	form_name.contentImgURL.value=pic;
+				           	
+				           	var data = form.serialize();
+				           	$.post('/contents', data, function () {
+					              
+				           		alert("등록되었습니다.");
+				              	check=true;
+				              	
+				           		$('#widgetu2952_input').attr('readonly',true); 
+				            	$('#widgetu2956_input').attr('readonly',true); 
+				           });
+			           	  }
+		           });
+		  		}else{
+			  			alert("이미 등록되었습니다.");
+			  	}
+		  	});
+		});    
+	</script>
+   </head>
+ <body>
+
+  <div class="clearfix borderbox" id="page"><!-- group -->
+   <a class="nonblock nontext clearfix grpelem" id="u5235-4" href="index.html"><!-- content --><p>Back</p></a>
+   <div class="clearfix grpelem" id="pu494"><!-- group -->
+    <div class="grpelem" id="u494"><!-- content -->
+     <div class="fluid_height_spacer"></div>
+    </div>
+    <div class="clip_frame grpelem" id="u1543"><!-- image -->
+     <img class="block" id="u1543_img" src="images/5.jpg?crc=4188611152" alt="" data-image-width="450" data-image-height="636"/>
+    </div>
+    <form class="form-grp clearfix grpelem" id="widgetu2946" method="post" name="contentForm"><!-- none box -->
+     <div class="clearfix grpelem" id="u2951-4"><!-- content -->
+      <p>Submitting Form...</p>
+     </div>
+     <div class="fld-grp clearfix grpelem" id="widgetu2952" data-required="true"><!-- none box -->
+      <span class="fld-textarea actAsDiv clearfix grpelem" id="u2955-4"><!-- content --><textarea class="wrapped-input" id="widgetu2952_input" name="contentOne" tabindex="1"></textarea><label class="wrapped-input fld-prompt" id="widgetu2952_prompt" for="widgetu2952_input"><span class="actAsPara">빈 칸에 글씨를 써 보세요</span></label></span>
+     </div>
+     <div class="fld-grp clearfix grpelem" id="widgetu2956" data-required="true"><!-- none box -->
+      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u2959-4"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu2956_input" name="contentTwo" tabindex="2"/><label class="wrapped-input fld-prompt" id="widgetu2956_prompt" for="widgetu2956_input"><span class="actAsPara">빈 칸에 글씨를 써 보세요</span></label></span>
+     </div>
+     <div>
+		<input type="hidden" value="" id="contentImg" name="contentImg" />
+	 </div>
+	 <div>
+		<input type="hidden" value="" id="contentImgURL" name="contentImgURL" />
+	 </div>
+    </form>
+   </div>
+   <div>
+   	<br /><br /><br /><br /><br /><br />
+   	<form>
+   		 <img class="grpelem" id="u2960" alt="등록에 실패했습니다." src="images/blank.gif?crc=4208392903"/>
+     	<img class="grpelem" id="u2962" alt="등록되었습니다.!" src="images/blank.gif?crc=4208392903"/>
+   		<div  style="margin: 115px 513px">
+   		     <input class="submit-btn NoWrap grpelem" id="u2961-17" type="button" value="" tabindex="3"/>	
+   		</div>
+   	</form>
+   </div>
+   <div class="verticalspacer" data-offset-top="782" data-content-above-spacer="781" data-content-below-spacer="61"></div>
+  </div>
+  <div class="preload_images">
+   <img class="preload" src="images/u2960-fse.png?crc=3913982949" alt=""/>
+   <img class="preload" src="images/u2962-fss.png?crc=4006926259" alt=""/>
+   <img class="preload" src="images/u2961-17-r.png?crc=3995759464" alt=""/>
+   <img class="preload" src="images/u2961-17-m.png?crc=3995759464" alt=""/>
+   <img class="preload" src="images/u2961-17-fs.png?crc=14605459" alt=""/>
+  </div>
+  <!-- Other scripts -->
+  <script type="text/javascript">
+   window.Muse.assets.check=function(d){if(!window.Muse.assets.checked){window.Muse.assets.checked=!0;var b={},c=function(a,b){if(window.getComputedStyle){var c=window.getComputedStyle(a,null);return c&&c.getPropertyValue(b)||c&&c[b]||""}if(document.documentElement.currentStyle)return(c=a.currentStyle)&&c[b]||a.style&&a.style[b]||"";return""},a=function(a){if(a.match(/^rgb/))return a=a.replace(/\s+/g,"").match(/([\d\,]+)/gi)[0].split(","),(parseInt(a[0])<<16)+(parseInt(a[1])<<8)+parseInt(a[2]);if(a.match(/^\#/))return parseInt(a.substr(1),
+16);return 0},g=function(g){for(var f=document.getElementsByTagName("link"),i=0;i<f.length;i++)if("text/css"==f[i].type){var h=(f[i].href||"").match(/\/?css\/([\w\-]+\.css)\?crc=(\d+)/);if(!h||!h[1]||!h[2])break;b[h[1]]=h[2]}f=document.createElement("div");f.className="version";f.style.cssText="display:none; width:1px; height:1px;";document.getElementsByTagName("body")[0].appendChild(f);for(i=0;i<Muse.assets.required.length;){var h=Muse.assets.required[i],l=h.match(/([\w\-\.]+)\.(\w+)$/),k=l&&l[1]?
+l[1]:null,l=l&&l[2]?l[2]:null;switch(l.toLowerCase()){case "css":k=k.replace(/\W/gi,"_").replace(/^([^a-z])/gi,"_$1");f.className+=" "+k;k=a(c(f,"color"));l=a(c(f,"backgroundColor"));k!=0||l!=0?(Muse.assets.required.splice(i,1),"undefined"!=typeof b[h]&&(k!=b[h]>>>24||l!=(b[h]&16777215))&&Muse.assets.outOfDate.push(h)):i++;f.className="version";break;case "js":k.match(/^jquery-[\d\.]+/gi)&&d&&d().jquery=="1.8.3"?Muse.assets.required.splice(i,1):i++;break;default:throw Error("Unsupported file type: "+
+l);}}f.parentNode.removeChild(f);if(Muse.assets.outOfDate.length||Muse.assets.required.length)f="Some files on the server may be missing or incorrect. Clear browser cache and try again. If the problem persists please contact website author.",g&&Muse.assets.outOfDate.length&&(f+="\nOut of date: "+Muse.assets.outOfDate.join(",")),g&&Muse.assets.required.length&&(f+="\nMissing: "+Muse.assets.required.join(",")),alert(f)};location&&location.search&&location.search.match&&location.search.match(/muse_debug/gi)?setTimeout(function(){g(!0)},5E3):g()}};
+var muse_init=function(){require.config({baseUrl:""});require(["jquery","museutils","whatinput","webpro","jquery.watch"],function(d){var $ = d;$(document).ready(function(){try{
+window.Muse.assets.check($);/* body */
+Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
+Muse.Utils.prepHyperlinks(true);/* body */
+Muse.Utils.fullPage('#page');/* 100% height page */
+Muse.Utils.initWidget('#widgetu2946', ['#bp_infinity'], function(elem) { return new WebPro.Widget.Form(elem, {validationEvent:'submit',errorStateSensitivity:'high',fieldWrapperClass:'fld-grp',formSubmittedClass:'frm-sub-st',formErrorClass:'frm-subm-err-st',formDeliveredClass:'frm-subm-ok-st',notEmptyClass:'non-empty-st',focusClass:'focus-st',invalidClass:'fld-err-st',requiredClass:'fld-err-st',ajaxSubmit:true}); });/* #widgetu2946 */
+Muse.Utils.showWidgetsWhenReady();/* body */
+Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
+}catch(b){if(b&&"function"==typeof b.notify?b.notify():Muse.Assert.fail("Error calling selector function: "+b),false)throw b;}})})};
+
+</script>
+  <!-- RequireJS script -->
+  <script src="scripts/require.js?crc=4108833657" type="text/javascript" async data-main="scripts/museconfig.js?crc=169177150" onload="if (requirejs) requirejs.onError = function(requireType, requireModule) { if (requireType && requireType.toString && requireType.toString().indexOf && 0 <= requireType.toString().indexOf('#scripterror')) window.Muse.assets.check(); }" onerror="window.Muse.assets.check();"></script>
+   </body>
+</html>
